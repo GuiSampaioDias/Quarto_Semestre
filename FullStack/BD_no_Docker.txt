@@ -1,0 +1,1 @@
+Serialização: Capacidade de uma informação trafegar de um computador ao outro.
