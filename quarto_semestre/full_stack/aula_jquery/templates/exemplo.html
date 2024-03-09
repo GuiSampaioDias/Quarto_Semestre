@@ -1,0 +1,35 @@
+<html>
+    <form name="name_form" id="name_form" >
+        <input type="text" id="nome" name="nome">
+        <input type="text" id="categoria" name="categoria">
+        <input type="submit" id="envio" name="envio">
+        <input type="text" id="resp" name="resp">
+    </form>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $('#name_form').submit(function(e) {
+                e.preventDefault();
+                alert($('#nome').val());
+
+                produto = {
+                    nome: $('#nome').val(),
+                    categ: $('#categoria').val()
+                };
+
+                $.ajax({
+                    type: 'POST',
+                        url: '/api/exemplo',
+                        dataType: 'json',
+                        contentType: 'application/json; charset=utf-8',
+                        data: JSON.stringify(produto),
+                        success: function(callback) {
+                            console.log(callback);
+                            $('#resp').val('Ola ' + callback.categ);
+                        },
+                        error: function() {
+                            $(this).html("error!");
+                        }
+                });
+        });
+    </script>
+</html>
