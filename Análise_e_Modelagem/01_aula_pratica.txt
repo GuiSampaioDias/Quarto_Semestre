@@ -1,0 +1,26 @@
+email prof fabio.campos@faculdadeimpacta.com.br
+Modelagem U.C
+
+Bater o olho no caso de uso e saber o que o sistema faz (diagrama simples)
+
+Fronteira (responsabilidade) Sistêmica:
+    Definir responsabilidade para não fazer o serviço dos outros
+    A fronteira precisa ter um nome.
+    Elipse representa o caso de uso. ex: Pagar conta (funcionalidade)
+    Ator represta a pessoa que nao pertence ao sistema(está fora do sistema).
+        Representam papéis dos diversos usuários do sistema. 
+        Têm uma meta específica que quer atingir/ obter ao usar o sistema.
+        Pode ser uma pessoa como também pode ser um sistema.
+        Um ator pode ser(sempre será um elemento externo):
+            -Pessoa
+            -Sestema
+            -Hardware
+
+    Nome de caso de uso:
+        -A primeira palavra tem que ser no verbo do infinitivo (terminado em ar, er ou ir)
+            ex: Fazer Matrícula
+        -Ser único, intuitivo e autoexplicativo.
+        -O nome de caso de uso vai estar sempre na pespectiva do ator que dispara o caso de uso.
+        - Se tiver a seta apontada para o caso de uso, representa quem interagem com o sistema
+
+No fluxo de exceção  

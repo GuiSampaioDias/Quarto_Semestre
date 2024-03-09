@@ -1,0 +1,18 @@
+Exercício - Jogo da Forca
+
+1 - O jogo deve ter apenas 1 jogador
+2 - As palavras já estão previamente cadastradas no sistema
+3 - O jogador deve ter a possibilidade de inicicar uma partida
+4 - Ao iniciar uma partida, o sistema deve sortear uma palavra, montar as 
+posições e a base da forca
+5 - O jogador deve ter a posssibilidade de informar uma letra
+6 - Para cada letra informada, o sistema verifica se a mesma faz parte da 
+palavra sorteada:
+	* Caso sim, preenche as ocorrencias da letra escolhida na palavra
+	* Caso não, preenche um pedaço do boneco na forca e indica a letra
+          errada
+7 - Se o jogador informou todas as letras corretas da palavra, ele vence 
+a partida
+8 - Se o boneco na forca ficar completo, o jogador perde a partida
+9 - O jogador deve ter a possibilidade de encerrar uma partida a qualquer 
+momento
