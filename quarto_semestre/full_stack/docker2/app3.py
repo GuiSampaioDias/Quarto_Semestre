@@ -58,7 +58,7 @@ def signUp():
 @app.route('/list',methods=['POST','GET'])
 def list():
     try:
-            conn = mysql.connect()
+            conn = mysql.connection
             cursor = conn.cursor()
             cursor.execute ('select user_name, user_username from tbl_user2')
             data = cursor.fetchall()
@@ -69,9 +69,9 @@ def list():
 
     except Exception as e:
         return json.dumps({'error':str(e)})
-    finally:
-        cursor.close()
-        conn.close()
+    #finally:
+       # cursor.close()
+        #conn.close()
 
 
 
