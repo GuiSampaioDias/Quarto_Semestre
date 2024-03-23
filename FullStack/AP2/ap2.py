@@ -15,31 +15,28 @@ app.config['MYSQL_DATABASE_HOST'] = 'db'
 mysql.init_app(app)
 
 
-@app.route('/')
-def main():
-    return render_template('index.html')
 
-@app.route('/showSignUp')
+
+@app.route('/form_cadastro')
 def showSignUp():
-    return render_template('signup.html')
+    return render_template('cadastrar.html')
 
 @app.route('/signUp',methods=['POST','GET'])
 def signUp():
     try:
         _name = request.form['inputName']
-        _email = request.form['inputEmail']
-        _password = request.form['inputPassword']
+        _sobrenome = request.form['inputSobrenome']
+        _cor = request.form['inputCor']
 
         # validate the received values
-        if _name and _email and _password:
+        if _name and _sobrenome and _cor:
 
             conn = mysql.connect()
             cursor = conn.cursor()
-            _hashed_password = _password
-            cursor.execute('insert into tbl_user (user_name, user_username, user_password) VALUES (%s, %s, %s)', ( _name,_email,_hashed_password))
+            cursor.execute('insert into tbl_pessoa (Nome, Sobrenome, Cor) VALUES (%s, %s, %s)', ( _name,_sobrenome,_cor))
             conn.commit()
-
-            return render_template('signup.html')
+            msg = "Cadastro realizado com sucesso"
+            return render_template('cadastrar.html', msg = msg)
         else:
             return json.dumps({'html':'<span>Enter the required fields</span>'})
 
@@ -58,7 +55,7 @@ def listar():
             cursor = conn.cursor()
             cursor.execute ('select user_name from tbl_user') 
             data = cursor.fetchall()
-            print(data[0]);
+            print(data[0])
             for x in range(len(data)):
                 print(data[x])
 
@@ -68,8 +65,9 @@ def listar():
     except Exception as e:
         return json.dumps({'error':str(e)})
     finally:
-        cursor.close() 
-        conn.close()
+        #cursor.close() 
+        #conn.close()
+        print ('oi')
 
 
 
