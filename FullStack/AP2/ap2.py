@@ -1,3 +1,22 @@
+'''
+create schema Ap2;
+
+use Ap2;
+
+CREATE TABLE tbl_pessoa (
+      id_pessoa BIGINT NOT NULL AUTO_INCREMENT, 
+      Nome VARCHAR(45) NULL, 
+      Sobrenome VARCHAR(45) NULL, 
+      Cor VARCHAR(45) NULL, 
+      
+      PRIMARY KEY (id_pessoa));
+
+'''
+
+
+
+
+
 import os
 from flask import Flask, render_template, json, request, jsonify
 from flaskext.mysql import MySQL
@@ -9,7 +28,7 @@ app = Flask(__name__)
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'mudar123'
-app.config['MYSQL_DATABASE_DB'] = 'teste'
+app.config['MYSQL_DATABASE_DB'] = 'Ap2'
 app.config['MYSQL_DATABASE_HOST'] = 'db'
 #app.config['MYSQL_DATABASE_HOST'] = '172.17.0.7'
 mysql.init_app(app)
@@ -17,11 +36,11 @@ mysql.init_app(app)
 
 
 
-@app.route('/form_cadastro')
-def showSignUp():
+@app.route('/')
+def telaInicial():
     return render_template('cadastrar.html')
 
-@app.route('/signUp',methods=['POST','GET'])
+@app.route('/form_cadastrar',methods=['POST','GET'])
 def signUp():
     try:
         _name = request.form['inputName']
@@ -53,15 +72,20 @@ def listar():
             
             conn = mysql.connect()
             cursor = conn.cursor()
-            cursor.execute ('select user_name from tbl_user') 
+            cursor.execute ('select * from tbl_pessoa') 
             data = cursor.fetchall()
             print(data[0])
-            for x in range(len(data)):
-                print(data[x])
-
-            conn.commit()
-            return render_template('signup2.html', datas=data)
-
+            msg = "Nenhuma Registro até o momento"
+            print('Abaixo')
+            print(data)
+            print(type(data))
+            if len(data) > 0:
+                for x in range(len(data)):
+                    print(data[x])
+                    conn.commit()
+                return render_template('listar_pessoas.html', datas=data)
+            else:
+                return render_template('listar_pessoas.html', msg = msg)
     except Exception as e:
         return json.dumps({'error':str(e)})
     finally:
@@ -70,89 +94,6 @@ def listar():
         print ('oi')
 
 
-
-
-@app.route('/listjson',methods=['POST','GET'])
-def listjson():
-    try:
-            conn = mysql.connect()
-            cursor = conn.cursor()
-            cursor.execute ('select user_name from tbl_user') 
-            data = cursor.fetchall()
-            print(data[0]);
-            for x in range(len(data)):
-                print(data[x])
-
-            conn.commit()
-            return jsonify(data)
-
-    except Exception as e:
-        return json.dumps({'error':str(e)})
-    finally:
-        cursor.close() 
-        conn.close()
-
-
-@app.route('/teste')
-def index():
-    return render_template('testejson.html')
-
-
-@app.route('/teste2')
-def index2():
-    return render_template('testejson2.html')
-
-
-@app.route('/teste3')
-def index3():
-    return render_template('testejson3.html')
-
-@app.route('/teste4')
-def index4():
-    return render_template('testejson4.html')
-
-@app.route('/teste5')
-def index5():
-    return render_template('testejson5.html')
-
-@app.route('/api/say_name', methods=['POST'])
-def say_name():
-    json = request.get_json()
-    first_name = json['first_name']
-    last_name = json['last_name']
-    return jsonify(first_name=first_name, last_name=last_name)
-
-
-@app.route('/api/say_name2', methods=['POST'])
-def say_name2():
-    first = request.form['first_name']
-    print(first)
-    return jsonify(first_name=first)
-
-
-@app.route('/api/say_name3', methods=['POST'])
-def say_name3():
-    first = request.form['first']
-    print(first)
-    return jsonify(first_name=first)
-
-
-@app.route('/api/say_name4', methods=['POST'])
-def say_name4():
-    json = request.get_json()
-    first_name = json['first']
-    last_name = json['last']
-    return jsonify(first_name=first_name, last_name=last_name)
-
-
-@app.route('/api/say_name5', methods=['POST'])
-def say_name5():
-
-    json = request.get_json()
-    first_name = json['first']
-    last_name = json['last']
-    valor = json['combo']
-    return jsonify(first_name=valor)
 
 
 

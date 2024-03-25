@@ -5,16 +5,22 @@ No cmd com o caminho de diretorio apontando para pasta que tem as duas pastas qu
 3- no cmd digitar: docker-compose up -d
 A imagem do servidor e do banco estam prontas 
 4-docker ps (para conferir se está funcionando e poder pegar o nome da imagem do banco de dados)
-5- no cmd: docker exec -it "o nome do banco" /bin/bash  ( no caso nome = docker2-db-1)
+5- no cmd: docker exec -it "o nome do banco" /bin/bash  ( no caso nome = ap2-db-1)
 Vai aparecer o bash-4.2# no cmd 
 6- colocar a linha de comando: mysql -uroot -p
 7- senha: mudar123
 Criar o schema, entrar no schema e criar a tabela
-8-      create schema teste;
-        
-        use teste;
-        
-        CREATE TABLE tbl_user ( user_id BIGINT NOT NULL AUTO_INCREMENT, user_name VARCHAR(45) NULL, user_username VARCHAR(45) NULL, user_password VARCHAR(45) NULL, PRIMARY KEY (user_id));
+8-      create schema Ap2;
+
+use Ap2;
+
+CREATE TABLE tbl_pessoa (
+      id_pessoa BIGINT NOT NULL AUTO_INCREMENT, 
+      Nome VARCHAR(45) NULL, 
+      Sobrenome VARCHAR(45) NULL, 
+      Cor VARCHAR(45) NULL, 
+      
+      PRIMARY KEY (id_pessoa));
 
 9- Colocar show tables; (para ver se a tabela foi criada com sucesso)
 10- colocar 2 vezes exit no cmd para sair do bando de dados
