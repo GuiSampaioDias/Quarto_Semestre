@@ -1,0 +1,37 @@
+Listas de requisitos
+    necessidades e caracteristicas
+    requisitos funcionais 
+        que tem funcionalidades(cadastrar, etc)
+    requisitos não funcionais 
+        relacionados a requisitos que nao tem funcionalidade(como a arquitetura do projeto)
+    **POC provas de conceito 
+        validar se o sistema esta atendendo ao requisitos funcionais e nao funcionais pré definidos.(usuabilidade, segurança, performance )
+    
+mvc é a manuteniabilidade (facilidade de manutenção) começou a usar os especialistas na área que tem, mais facilidade, especialização das funcionalidades. Normalmente usa API
+    Apresentação  front
+    negócio    back end
+    persistencia banco de dados
+    Infraestrtura backend
+
+Microserviços são unidades idenpendentes, evolutivos e instaláveis( a contenerização é fundamental no microserviços). Eles rodam de formas isoladas, se der algum erro em algum microserviço não interfere nos outros serviços. 
+1- podendo usar linguagens diferntes
+2- evoluidos separadamente
+3- Com a versão isolada o sistema se mantem em pé se por algum acaso um dos microserviços cair 
+4- Escalabilidade
+5- troca de versão
+                                cliente
+
+                              api Gateway
+                           /       |       \
+                          /        |        \    
+                   serviço A    serviço B    serviço C
+
+            persistencia    persistencia     persistencia                 
+        e Infraestrtura    e Infraestrtura    e Infraestrtura
+
+
+Event Driven
+Unidades de processamento de eventos coordenados em um mediador , ou 
+
+
+        
