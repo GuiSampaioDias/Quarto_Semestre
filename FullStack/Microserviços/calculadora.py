@@ -4,7 +4,7 @@ from unittest import TestCase, main
 
 class Calculadora(object):
     def calcular(valor1, valor2, operador):
-        operacaoFabrica = Operacao()
+        operacaoFabrica = OperacaoFabrica()
         operacao = operacaoFabrica.criar(operador)
         if operacao == None:
             return 0
@@ -24,12 +24,33 @@ class OperacaoFabrica(object):
             return Divisao()
         
 class Operacao(metaclass=abc.ABCMeta):
-    @abstract
-    def criar(self, valor1, valor2):
+    @abc.abstractmethod
+    def executar(self, valor1, valor2):
         pass
-class Soma():
-    def criar(self, valor1, valor2):
-        return valor1 + valor2
+
+class Soma(Operacao):
+    def executar(self, valor1, valor2):
+        resultado = valor1 + valor2
+        return resultado
+    
+class Multiplicacao(Operacao):
+    def executar(self, valor1, valor2):
+        resultado = valor1 * valor2
+        return resultado
+    
+class Divisao(Operacao):
+    def executar(self, valor1, valor2):
+        resultado = valor1 / valor2
+        return resultado
+    
+class Subtracao(Operacao):
+    def executar(self, valor1, valor2):
+        resultado = valor1 - valor2
+        return resultado
+    
+teste1 = Calculadora.calcular(1,2,'SOMA')
+print(teste1)
+    
 
         
         
