@@ -50,9 +50,9 @@ class Subtracao(Operacao):
     
 
 class Testes(TestCase):
-    def tet_soma(self):
+    def test_soma(self):
         calculator = Calculadora()
-        self.assertEqual(calculator.calcular(55,10,'soma'), 65)
+        self.assertEqual(calculator.calcular(25, 13, 'soma'), 38)
 
     def test_divisao(self):
         calculator = Calculadora()
