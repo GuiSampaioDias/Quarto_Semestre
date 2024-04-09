@@ -3,9 +3,9 @@ from unittest import TestCase, main
 
 
 class Calculadora(object):
-    def calcular(self, valor1, valor2, operador):
+    def calcular(self, valor1, valor2, operacao):
         operacaoFabrica = OperacaoFabrica()
-        operacao = operacaoFabrica.criar(operador)
+        operacao = operacaoFabrica.criar(operacao)
         if operacao == None:
             return 0
         else:
@@ -13,15 +13,18 @@ class Calculadora(object):
             return resultado
 
 class OperacaoFabrica(object):
-    def criar(self, operador):
-        if operador.upper() == 'SOMA':
-            return Soma()
-        elif operador.upper() == 'SUBTRACAO':
-            return Subtracao()
-        elif operador.upper() == 'MULTIPLICACAO':
-            return Multiplicacao()
-        elif operador.upper() == 'DIVISAO':
-            return Divisao()
+    def criar(self):
+        return Soma()
+    
+    def criar(self):
+        return Divisao()
+    
+    def criar(self):
+        return Subtracao()
+    
+    def criar(self):
+        return Multiplicacao()
+    
         
 class Operacao(metaclass=abc.ABCMeta):
     @abc.abstractmethod
@@ -52,7 +55,7 @@ class Subtracao(Operacao):
 class Testes(TestCase):
     def test_soma(self):
         calculator = Calculadora()
-        self.assertEqual(calculator.calcular(25, 13, 'soma'), 38)
+        self.assertEqual(calculator.cria_soma(25, 13), 38)
 
     def test_divisao(self):
         calculator = Calculadora()
@@ -75,7 +78,7 @@ class Testes(TestCase):
 
 class Main(object):
     calculator = Calculadora()
-    resultado = calculator.calcular(25, 13, 'soma')
+    resultado = calculator.cria_soma(25, 13)
     print(resultado)    
 
 if __name__ == "__main__":
