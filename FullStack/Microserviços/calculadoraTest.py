@@ -13,17 +13,21 @@ class Calculadora(object):
             return resultado
 
 class OperacaoFabrica(object):
-    def criar(self):
-        return Soma()
+    def criar(self, operacao):
+        if operacao.lower() == 'soma':
+            return Soma()
     
-    def criar(self):
-        return Divisao()
+    def criar(self, operacao):
+        if operacao.lower() == 'divisao':
+            return Divisao()
     
-    def criar(self):
-        return Subtracao()
+    def criar(self, operacao):
+        if operacao.lower() == 'subtracao':
+            return Subtracao()
     
-    def criar(self):
-        return Multiplicacao()
+    def criar(self, operacao):
+        if operacao.lower() == 'multiplicacao':
+            return Multiplicacao()
     
         
 class Operacao(metaclass=abc.ABCMeta):
@@ -78,7 +82,7 @@ class Testes(TestCase):
 
 class Main(object):
     calculator = Calculadora()
-    resultado = calculator.cria_soma(25, 13)
+    resultado = calculator.calcular(25, 13, 'soma')
     print(resultado)    
 
 if __name__ == "__main__":
