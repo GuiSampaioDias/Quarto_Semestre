@@ -1,0 +1,24 @@
+Vantagens do React 
+    Segurança 
+    Reutilização- pq tem os componentes
+    principal ganho é a performance (trabalho com controle de estados)
+
+virtualiza o Dom  otimiza
+Trabalha com estilo arquitetural Single page aplication
+    So manda para o servidor aqueles cuja o cliente fez alguma alteração da  pagina
+
+
+    intalar o js ultima versão estavel
+
+    windows + r %appdata%
+    cria uma pasta npm
+
+    no cmd digita npm + enter
+        para ver se o js está instalado 
+
+    ainda no cmd digitar: npx create-react-app my-app
+
+    no cmd cd my-app (para entrar na pasta)
+    no cmd npm start
+    
+
