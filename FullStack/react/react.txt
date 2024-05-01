@@ -20,7 +20,7 @@ Trabalha com estilo arquitetural Single page aplication
     ainda no cmd digitar: npx create-react-app my-app  ( aqu o diretório tem que está apontando para onde vamos criar a pasta)
 
     no cmd cd my-app (para entrar na pasta)
-    no cmd npm start
+    -no cmd npm start
     
     
 
