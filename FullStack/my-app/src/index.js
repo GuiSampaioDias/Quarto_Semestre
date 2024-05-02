@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Welcome from './Welcome';
 import Contador from './Contador';
 import Clock from './Clock';
+import NameForm from './Form2';
+import Form from './Form3';
 
 
 // criando as duas variaveis que será usado no arquivo Welcome repare que dentro do root.render quando rederizamos o welcome nos colocamos as duas variáveis dentro do welcome 
@@ -18,6 +20,8 @@ root.render(
      <Welcome name={name} data={data} />
      <Contador />
      <Clock />
+     <NameForm />
+     <Form />
   </React.StrictMode>
 );
 
