@@ -8,6 +8,7 @@ import Contador from './Contador';
 import Clock from './Clock';
 import NameForm from './Form2';
 import Form from './Form3';
+import Form5 from './Form5';
 
 
 // criando as duas variaveis que será usado no arquivo Welcome repare que dentro do root.render quando rederizamos o welcome nos colocamos as duas variáveis dentro do welcome 
@@ -22,6 +23,7 @@ root.render(
      <Clock />
      <NameForm />
      <Form />
+     <Form5 />
   </React.StrictMode>
 );
 
