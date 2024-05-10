@@ -53,7 +53,7 @@ class Testes(TestCase):
     def test_soma(self):
         calculator = Calculadora()
         self.assertEqual(calculator.calcular(25, 13, 'soma'), 38)
-
+    
     def test_divisao(self):
         calculator = Calculadora()
         self.assertEqual(calculator.calcular(10, 5, 'divisao'), 2)
