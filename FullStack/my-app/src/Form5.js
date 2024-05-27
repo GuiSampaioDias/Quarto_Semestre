@@ -4,7 +4,9 @@ import axios from 'axios';
 function Form5(){
 
     const [campos, setCampos] = useState({
-        txtNome: ''
+        txtNome: '',
+        txtTelefone: '',
+        txtEndereco: ''
     });
 
     const [ret, setRet] = useState('');
@@ -38,6 +40,16 @@ function Form5(){
                     <div>
                         <label>Nome:
                             <input type="text" name="txtNome" id="txtNome" onChange={handleInputChange} />
+                        </label>
+                    </div>
+                    <div>
+                        <label>Telefone:
+                            <input type="text" name="txtTelefone" id="txtTelefone" onChange={handleInputChange} />
+                        </label>
+                    </div>
+                    <div>
+                        <label>Endereço:
+                            <input type="text" name="txtEndereco" id="txtEndereco" onChange={handleInputChange} />
                         </label>
                     </div>
  
