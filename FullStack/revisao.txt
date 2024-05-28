@@ -1,0 +1,11 @@
+sistemas diestribuidos:
+MVC model view controler 
+separar em camadas facilitar a manutenabilidade.
+1 MVC
+2 Microserviços
+3 serialização 
+4 react 
+5 
+
+minuto 20:12 para conteinerização
+
