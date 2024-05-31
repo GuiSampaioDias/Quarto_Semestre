@@ -1,0 +1,11 @@
+1 - UML não é uma linguagem de programação.
+UML não é processo de desenvolvimento de software. Processo de desenvolvimento de software (cascata, modelo espiral) usa o uml para documentar ura -unidade de resposta automatica
+uml é a linguagem para representar aspectos do sistema 
+Uml não é uma especificação para ferramentas de modelagem (não é ligada a ferramenta de modelagem)
+
+
+2- Quais os elementos que compôem um diagrama de casos de uso?
+ Atores, fronteira, Casos de uso, e associações
+
+3- Por que a Uml é composta por diversos diagramas?
+Para fornecer múltiplas visões do sistema a ser modelado, identificando seus aspectos e características sob diversos ângulos e níveis
