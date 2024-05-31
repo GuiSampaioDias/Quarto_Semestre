@@ -15,13 +15,15 @@ mysql = MySQL(app)
 def say_name5():
     json = request.get_json()
     nome = json['txtNome']
+    telefone = json['txtTelefone']
+    endereco = json['txtEndereco']
     print(nome)
 
     conn = mysql.connection
     cursor = conn.cursor()
-    cursor.execute('insert into Ap2 (nome) VALUES (%s)', (nome,))
+    cursor.execute('insert into Ap2 (nome, telefone, endereco) VALUES (%s, %s, %s)', (nome, telefone, endereco))
     conn.commit()
-    return jsonify(first_name=nome)
+    return jsonify(first_name=f'Cadastrado com sucesso: \nNome: {nome} \nTelefone: {telefone}\nEndereço: {endereco}')
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
