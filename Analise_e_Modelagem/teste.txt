@@ -43,5 +43,3 @@ Toda e qualquer classe possui, obrigatoriamente , atributo e métodos ( está er
 
 10- Qual o principal objetivo do diagrama de sequência ?
 Apresentar as interações entre objetivos( e a troca de mensagens envolvida) na ordem temporal que eles acontecem 
-
-

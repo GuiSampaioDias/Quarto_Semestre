@@ -1,0 +1,17 @@
+Como montar um escopo?
+    Com tecnicas de engenharia de requisitos, pegando informações, fazendo perguntas para os clientes.
+
+piramide
+              / necessidade \
+             /caracteristica_\      ___Problema____    caracteristica é para atender a uma necessidade
+            /_requisito_______\        Solução         requisito é o que vamos carregar para o projeto
+
+requisitos não funcional está em oposição aos requisitos funcionais
+funcionais são requisitos associados a funcionalidade.(validação do ticket , Manter Cor, Emitir Ticket e etc)
+Ator- pessoa, sistema ou hardware.
+
+include a ponta da seta toca o caso incluido 
+extend  a ponta da seta aponta a quem solicita
+
+nó de ação tem que ser em relação ao sistema (um retangulo pegqueno, olhando o que o sistema está fazendo , recebendo valor, recebendo senha )
+nó de decisão losangulo
