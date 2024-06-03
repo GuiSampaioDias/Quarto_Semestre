@@ -9,3 +9,24 @@ separar em camadas facilitar a manutenabilidade.
 
 minuto 20:12 para conteinerização
 
+
+Etapa para criar containers
+
+
+1-MVC Model view controler(modelo arquetetural básico)
+    Para criar as camadas de negócio 
+    Porque usamos o Mvc?    
+        Para facilitar a manutenabilidade, produtividade do código e fluidez do projeto e epecialização de atividades e de camadas (naturalmente os profissinais se especializam em uma área). Separar em camadas tem uma série de vantagens, os conceitos e apresentações preocupações e comunicações sempre por api, performance.
+
+2-Serialização fazer as informações trafeguem de um computador para outro.(tranformar o dado em string e trafegar)
+     A desserialização é o processo inverso onde transforma a strin no formato da estrutura de dados original.
+
+3- Vantagem de se trabalhar com react:  segurança, otimização,serialização e comunicação de informações. Trabalha com arquitetura de single page aplication, biblioteca de componente no medio e longo prazo. Desvantagem: curva de aprendizado é um pouco maior.
+
+4- Microserviços: vantagens- escalabilidade, disponibilidade, performance e seviços independentes que rodam de forma evolutiva e instalável.
+
+5 Etapas para se criar microserviços:
+    Conteinerizar: criar docker file, construindo a imagem e rodando os containers a partir da imagem 
+
+
+5-

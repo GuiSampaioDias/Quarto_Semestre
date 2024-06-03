@@ -1,3 +1,7 @@
+
+include - a ponta da seta é como uma mão que toca o caso de uso que ele quer 
+extend é o ao contrario a seta aponta ao caso de uso que está pedindo o caso de uso
+
 1 - UML não é uma linguagem de programação.
 UML não é processo de desenvolvimento de software. Processo de desenvolvimento de software (cascata, modelo espiral) usa o uml para documentar ura -unidade de resposta automatica
 uml é a linguagem para representar aspectos do sistema 
@@ -9,3 +13,35 @@ Uml não é uma especificação para ferramentas de modelagem (não é ligada a 
 
 3- Por que a Uml é composta por diversos diagramas?
 Para fornecer múltiplas visões do sistema a ser modelado, identificando seus aspectos e características sob diversos ângulos e níveis
+
+4- Em relação ao "Include", assinale a incorreta:
+incorreta- Pode ocorrer etre atores e casos de uso;
+corretas- 1- É uma associação utilizada quando existe um cenário, rotina ou situação comum a mais de um caso de uso;
+          2- Indica obrigatoriedade;
+          3- É representado por uma linha tracejada. contendo uma seta em uma das suas extremidades, apontando para o caso de uso a ser incluido;
+          4- Utiliza esteriótipo para ser incluido;
+
+5- Considerando a Documentação de Casos de Uso, analise as frases abaixo:
+    |- Nela encontramos quais atores interagem com o Caso de Uso
+    ||- A pós-condição é opcional e apenas informativa(Falsa- é extremamente importante identificar a pós-condição)
+    |||- Nela encontramos quais etapas devem ser executadas pelo ator e quais etapas devem ser executadas pelo sistema
+
+6- Em relação ao Paradigma de Orientação a Objetos, assinale a alternativa correta:
+    certo- Visualiza um sistema de software como uma coleção de agentes interconectados chamados "Objetos";
+    errado- Refere-se à um modelo de desenvolviemtno de software delimitado por fases (etapas) que não pposem se repetir até o término do projeto;(os modelos são espiral, cascata e etc)
+    Trata-se de uma técnica que permite uma prototipação de telas mais eficiente de software, independente da complexidade;(isso é ux/ui )
+    Permite o desenvolvimento de sistemas de baixa complexidade;(o sistema objeto da para ser utilizado em sistemas de baixa e alta complexidade)
+    É apenas conceitual e teórica. não sendo possível sua aplicação prática.(aplicação é prática tambem)
+
+7- No contexto do Diagrama de classes, os modificadores de visibilidade podem ser aplicados aos atributos e aos métodos e são representados por símbolos específicos. Para os modificadores "Público", "Protegido" e "Privado", quais símbolos que representam respectivamente dos mesmos:
+    +, #, -
+
+8- Em relação ao Diagrama de Classes, assinale a alternativa incorreta:
+Toda e qualquer classe possui, obrigatoriamente , atributo e métodos ( está errado pois não é obirgatória ter atributo e classe)
+
+9- Diagrama de sequencia : "Trata-se de um diagrama comportamental, cuja preocupação é determinar a sequência de eventos que ocorre em determinado processo, identificando quais menasagens devem ser disparadas entre os elementos envolvidos e em que ordem".
+
+10- Qual o principal objetivo do diagrama de sequência ?
+Apresentar as interações entre objetivos( e a troca de mensagens envolvida) na ordem temporal que eles acontecem 
+
+
