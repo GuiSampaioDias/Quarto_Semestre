@@ -29,4 +29,37 @@ Etapa para criar containers
     Conteinerizar: criar docker file, construindo a imagem e rodando os containers a partir da imagem 
 
 
-5-
+1- Explique a serialização;
+Ela tranforma o objeto em string. E a serialização é a capacidade de trafegar essa informação de um computador para o outro. Como por exemplo levar a informação do front end para o back end do back para o banco de dados.
+
+2-Vantagens de se usar o MVC:
+A arquitetura do Mvc traz diversos benefícios no desenvolvimento de um software. As vantagens são :
+-Facilita a manutenabilidade
+-Produtividade do código 
+-Fluidez do projeto
+-Especialização de atividades e de camadas
+
+3-Vantagens de usar um microserviço:
+-Escalabilidade 
+-Disponibilidade 
+-Serviços independentes que rodam de forma evolutiva e instalável
+
+4-Vantagens e desvantagens do react:
+Vantagens                                Desvantagem: Curva de aprendizado maior quando no iício da aprendizagem da linguagem
+ - Segurança                                           
+ - Serealização 
+ - Otimização 
+ - Comunicação de informações 
+ - Arquitetura de single page aplication
+ - Biblioteca de componentes de médio e longo prazo
+
+5- Etapas para se criar um Microserviço
+-Desenvolver o código do microserviço
+-Criar um Dockerfile
+-Construir a imagem Docker
+-Rodar o container a partir da imagem
+
+Desenvolver o código do microserviço: Escrever o código que implementa a lógica do microserviço usando a linguagem de programação escolhida.
+Criar um Dockerfile: Especificar um arquivo Dockerfile que define o ambiente necessário para rodar o microserviço. Isso inclui a imagem base, dependências e comandos necessários para construir a aplicação.
+Construir a imagem Docker: Usar o Dockerfile para construir uma imagem Docker, que é uma versão empacotada e imutável do seu microserviço.
+Rodar o container a partir da imagem: Criar e executar um container baseado na imagem Docker construída. Isso isola o microserviço e garante que ele será executado de forma consistente em diferentes ambientes.
